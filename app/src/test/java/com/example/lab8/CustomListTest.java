@@ -24,8 +24,14 @@ public class CustomListTest {
     public void addCityTest() {
         list = MockCityList();
         int listSize = list.getCount();
-        list.addCity(new City("Estevan", "SK"));
-        assertTrue(list.hasCity(new City("Estevan", "SK")));
+
+        //list.addCity(new City("Estevan", "SK"));
+
+        City missingCity = new City("edm","ab");
+        list.deleteCity(missingCity);
+        assertTrue(list.hasCity(missingCity));
+
+
     }
 
 }
