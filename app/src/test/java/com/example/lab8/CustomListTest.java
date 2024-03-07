@@ -31,8 +31,7 @@ public class CustomListTest {
         City missingCity = new City("edm","ab");
         list.addCity(missingCity);
 
-        list.deleteCity(missingCity);
-        assertFalse(list.hasCity(missingCity));
+        assertEquals(list.countCities(),1);
 
 
     }
