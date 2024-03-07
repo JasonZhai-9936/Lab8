@@ -26,9 +26,9 @@ public class CustomList extends ArrayAdapter<City> {
         this.context = context;
     }
 
-    private CustomList list;
-    public CustomList MockCityList(){ list=new CustomList(null,new ArrayList<>());
-        return list; }
+
+
+
 
     @NonNull
     @Override

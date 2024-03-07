@@ -12,6 +12,10 @@ import org.junit.jupiter.api.BeforeAll;
 import java.util.ArrayList;
 
 public class CustomListTest {
+
+
+
+
     private CustomList list;
     public CustomList MockCityList(){ list=new CustomList(null,new ArrayList<>());
         return list; }
