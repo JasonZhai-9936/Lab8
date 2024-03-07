@@ -10,6 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
 import java.util.ArrayList;
 
 public class CustomList extends ArrayAdapter<City> {
@@ -22,6 +25,10 @@ public class CustomList extends ArrayAdapter<City> {
         this.cities = cities;
         this.context = context;
     }
+
+    private CustomList list;
+    public CustomList MockCityList(){ list=new CustomList(null,new ArrayList<>());
+        return list; }
 
     @NonNull
     @Override
@@ -53,4 +60,11 @@ public class CustomList extends ArrayAdapter<City> {
 
     }
 
+    @Test
+    public void addCityTest() {
+        list = MockCityList();
+        int listSize = list.getCount();
+        list.addCity(new City("Estevan", "SK"));
+        assertEquals(list.getCount(), listSize + 1);
+    }
 }
